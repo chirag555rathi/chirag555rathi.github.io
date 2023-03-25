@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- font font-awesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- aos -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<style>
+  /* scroll btn */
+  
+/* #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid white;
+  background: radial-gradient(#fbc1cc, #fa99b2);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+} */
+
+
+  /* scroll btn end */
+
+  /* qualification */
+   *{
+    margin: 0;
+    padding: 0;
+   }
+  .main-container {
+  padding: 30px;
+  background-color:#414a52 ;
+}
+
+/* HEADING */
+
+.heading {
+  text-align: center;
+}
+
+.heading__title {
+  font-weight: 600;
+  color: white;
+}
+
+.heading__credits {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.heading__link {
+  text-decoration: none;
+}
+
+.heading__credits .heading__link {
+  color: inherit;
+}
+
+/* CARDS */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 40;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+
+.card-1 {
+  background: radial-gradient(#1fe4f5, #3fbafe);
+}
+
+.card-2 {
+  background: radial-gradient(#fbc1cc, #fa99b2);
+}
+
+.card-3 {
+  background: radial-gradient(#76b2fe, #b69efe);
+}
+
+.card-4 {
+  background: radial-gradient(#60efbc, #58d5c9);
+}
+
+.card-5 {
+  background: radial-gradient(#f588d8, #c0a3e5);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
+  /* qualifications end */
+#styles{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  padding-top: 29px;
+}
+li{ 
+	list-style-type: none;
+	font-family: sans-serif;
+}
+
+.skills{ /*style the text*/
+	width: 500px;
+	margin: 60px auto;
+	color: #fff;
+  /* background-color: rgb(122, 39, 39); */
+
+}
+
+
+.skills li{ /*set margin of li*/
+	margin: 20px 0;
+}
+
+.bar{ /*style the bar*/
+	background-color: #21242b;
+	display: block;
+	height: 0px;
+	border: 4px solid white;
+	border-radius: 10px;
+	/* overflow: hidden; */
+	box-shadow: 0 0 10px #0955edb3;
+}
+
+.bar span{ /*style the span tag*/
+	height: 7px;
+  border-radius: 10px;
+padding: auto;
+  float: left;
+	background-color: #212324;
+}
+
+.html{ /*set skills and animation of html*/
+	width: 80%;
+	animation: html 2s;
+}
+
+.css{ /*set skills and animation of css*/
+	width: 93%;
+	animation: css 2s;
+}
+
+.javascript{ /*set skills and animation of javascript*/
+	width: 50%;
+	animation: javascript 2s;
+}
+
+.jquery{ /*set skills and animation of jquery*/
+	width: 30%;
+	animation: jquery 2s;
+}
+
+@keyframes html{ /*animate html skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 80%;
+	}
+}
+
+@keyframes css{ /*animate css skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 93%;
+	}
+}
+
+@keyframes javascript{ /*animate javascript skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 50%;
+	}
+}
+
+@keyframes jquery1{ /*animate jquery skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 30%;
+	}
+}
+
+@media screen and (max-width:320px){
+  nav{
+   width: 320px;
+  }
+  .skills{
+    width: 280px;
+  }
+
+}
+@media screen and (min-width:321px)and (max-width:375px) {
+nav{
+  width: 375px;
+}
+.skills{
+  width: 300px;
+}
+
+}
+@media screen and (min-width:376px)and (max-width:425px) {
+  nav{
+    width:425px ;
+  }
+  .skills{
+    width: 325px;
+  }
+}
+@media screen and (min-width:768px)and (max-width:1024px) {
+ .skills{
+  width:700px ;
+ }
+}
+</style>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-play fa-rotate-290"></i> CHIRAG</a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#page-top" class="page-scroll">Home</a></li>
+        <li><a href="#about" class="page-scroll">About Me</a></li>
+        <li><a href="#education" class="page-scroll">Education</a></li>
+        <li><a href="#portfolio" class="page-scroll">Projects</a></li>
+        <li><a href="#contact" class="page-scroll">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<!-- Header -->
+<header id="header">
+  <div class="intro">
+    <div class="container">
+      <div class="row">
+        <div class="intro-text">
+          <h1>  Chirag  <br> rathi</h1>
+         
+          <p>Web Design • Photoshop </p>
+          <a href="#about" class="btn btn-custom btn-lg page-scroll">Learn More</a> </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>About Me</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6"> <img  src="img/2.jpg" class="img-responsive"data-aos="zoom-in" alt=""> </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <p id="styles">Hello, I'm Chirag Rathi. I'm a website designer who codes. I'm also the Photoshop artist. I'm done my website designing from "SIT HUB".</p>
+          <p id="styles"> I've worked internationally and also freelancing, in-house, and remotely on projects for leading brands, agencies and more.</p>
+          <!-- skills -->
+          <div class="skills"data-aos="fade-down" data-aos-duration="3000">  <!-- create a div -->
+            <div class="section-title text-center center" >
+              <h2>My Skills </h2>
+              <hr>
+            </div>
+            <li>
+                <h3>HTML</h3><span class="bar"><span class="html"></span></span> <!-- skill bar 1 -->
+            </li>
+        
+            <li>
+                <h3>CSS</h3><span class="bar"><span class="css"></span></span><!-- skill bar 2 -->
+            </li>
+        
+            <li>
+                <h3>JAVASCRIPT</h3><span class="bar"><span class="javascript"></span></span><!-- skill bar 3 -->
+            </li>
+        
+            <li>
+                <h3>JQUERY</h3><span class="bar"><span class="jquery"></span></span><!-- skill bar 4 -->
+            </li>
+        </div>
+          <a href="#portfolio" class="btn btn-default btn-lg page-scroll">Works</a> </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- /////////   skills   //////// -->
+<!-- EDUCATIONS -->
+<div id="education">
+<div class="main-container">
+  <div class="heading">
+    <h1 class="heading__title"data-aos="fade-up">EDUCATION</h1>
+    <!-- <p class="heading__credits"><a class="heading__link" target="_blank" href="https://dribbble.com/sl">...........</a></p> -->
+  </div>
+  <div class="cards"data-aos="fade-up"data-aos-duration="3000">
+    <div class="card card-1">
+      <div class="card__icon"><i class="fa-solid fa-school"></i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <P>MATRICULATED</P>
+      <h2 class="card__title">I Studied for my Secondary education from Holy International. Sr.Sec.School and in year 2019 i passed my Matriculation exam from CBSE ( Central Board Of Secondary Education ) Board.</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">APRIL 2009-2019<i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card card-2">
+      <div class="card__icon"><i class="fa-solid fa-book"></i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <p>HIGH SCHOOL GRADUATE</p>
+      <h2 class="card__title">I Studied for my higher secondary education from holy international. sr.sec.school and in year 2021 I passed my Higher Secondary School exam from CBSE ( Central Board Of Secondary Education )Board in the stream of ARTS I scored 88% Overall.</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">MAY 2019-2021 <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card card-3">
+      <div class="card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <p> COLLEGE ADMISSION</p>
+      <h2 class="card__title">In year 2021 I got Admission in the College Delhi University, (SOUTH_CAMPUS.NewDelhi) in the programme of B.A.</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">AUG 2021 -
+          MAY 2024 (EXPECTED) <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    <div class="card card-4">
+      <div class="card__icon"><i class="fa-solid fa-laptop-code"></i></div>
+      <p class="card__exit"><i class="fas fa-times"></i></p>
+      <P>RELEVENT COURSEWORK</P>
+      <h2 class="card__title">( From : Sithub Institute,dwarka mor)
+        [Website Designing]</h2>
+      <p class="card__apply">
+        <a class="card__link" href="#">23 SEP -
+          PRESENT <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- qualifications end -->
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Projects</h2>
+      <hr>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li><a href="#" data-filter=".web">Web Design</a></li>
+            <li style="margin-top: 25px;"><a href="#" data-filter=".photography">Photoshop</a></li>
+            <!-- <li><a href="#" data-filter=".product">Product Design</a></li> -->
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 product">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 product">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 product">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+              </div>
+              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>  Get In Touch</h2>
+      <hr>
+    </div>
+    <div class="col-md-8 col-md-offset-2"data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-default btn-lg">Send Message</button>
+      </form>
+      <div class="social">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container text-center">
+    <div class="fnav">
+      <p>Copyright &copy; 2023 by Chirag Rathi. All rights reserved.</a></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- scroll btn -->
+<!-- <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> -->
+
+<!-- 
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if(document.body.scrollTop > 500 || document.documentElement.scrollTop >500) {
+    mybutton.style.display = "block";
+ 
+  } 
+  else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.body.style.transitionDelay  = "10s"
+
+  document.documentElement.scrollTop = 0;
+    
+
+
+}
+</script> -->
+<!-- aos -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- scroll btn end -->
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/nivo-lightbox.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
